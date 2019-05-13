@@ -1,0 +1,167 @@
+/* Codehouse.pk - Aa;iyan Gul */
+a:hover, a:focus { outline: 0; }
+
+.codehouse-grid:after, .codehouse-step-results .products-grid:after, .codehouse-step-results .category-products.primary .attribute-content:after { clear: both; content: ''; display: block; }
+
+.codehouse-card > a:after, .codehouse-bodyparts .start-over:before, .codehouse-content .start-over:before, .codehouse-footer .start-over:before { background-image: url({{'sprites.png' | asset_url}}); content: ''; }
+
+@media (-webkit-min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 192), (min-resolution: 192dppx) { .codehouse-card > a:after, .codehouse-bodyparts .start-over:before, .codehouse-content .start-over:before, .codehouse-footer .start-over:before { background-image: url({{'sprites.png' | asset_url}}); background-size: 139px 225px; } }
+
+/******************************************************************************* codehouse Title */
+.codehouse-title { height: 45px; margin-top: -30px; margin-bottom: 45px; }
+
+@media screen and (min-width: 1025px) { .codehouse-title { clear: both; position: relative; }
+
+.codehouse-title:before { background: #edece7; content: ''; margin-left: -200%; position: absolute; top: 0; bottom: 0; width: 400%; } }
+
+.codehouse-title h1, .codehouse-title .progress-bar { position: relative; display: inline-block; vertical-align: middle; }
+
+.codehouse-title h1 { color: #404141; font-size: 14px; letter-spacing: .12em; margin-bottom: 0; min-width: 150px; width: 15%; }
+
+.codehouse-title h1 a, .codehouse-title h1 a:hover { color: #404141; text-decoration: none; }
+
+/******************************************************************************* codehouse Description */
+.codehouse-description { text-align: center; }
+
+.codehouse-description h2 { color: #2e2e2e; font-size: 30px; letter-spacing: .12em; margin-bottom: 5px; text-align: center; }
+
+.codehouse-description h3 { color: #2e2e2e; font-size: 18px; font-weight: 400; letter-spacing: .14em; margin-bottom: 0; text-align: center; }
+
+.codehouse-description p { color: #404141; font-size: 14px; line-height: 1.7; margin-top: 20px; }
+
+.codehouse-content h2 { color: #2e2e2e; font-weight: 700; letter-spacing: .1em;}
+
+.codehouse-step-noroute .codehouse-description, .codehouse-step-getstarted .codehouse-description { text-align: left; }
+
+.codehouse-step-noroute .codehouse-description h2, .codehouse-step-getstarted .codehouse-description h2 { font-size: 27px; text-align: left; }
+
+.codehouse-step-noroute .codehouse-description h2 span, .codehouse-step-getstarted .codehouse-description h2 span { font-weight: 400; letter-spacing: .14em; }
+
+/******************************************************************************* codehouse Content */
+.codehouse-content { background: #f5f4f0; background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#f0f0ed)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #f0f0ed); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #f0f0ed); margin: 30px 0 0; min-height: 524px; padding-top: 15px; padding-bottom: 0; position: relative; z-index: 1; }
+
+.codehouse-content.sports { padding-top: 10px; }
+
+.codehouse-content:before { position: absolute; top: 0; left: 0; right: 0; bottom: -2px; background-image: none; background-position: center top; background-repeat: no-repeat; border-bottom: 1px solid #e5e5e5; content: ''; z-index: -1; }
+
+.codehouse-step-noroute .codehouse-content p { font-size: 20px; margin: 7% 10px 0; text-align: center; }
+
+.codehouse-step-getstarted .codehouse-content { padding-top: 120px; }
+
+@media screen and (max-width: 700px) { .codehouse-step-getstarted .codehouse-content { padding-top: 0; } }
+
+.codehouse-step-getstarted .codehouse-content:before { background-image: url({{'codehouse-bg.png' | asset_url}}); background-position: 40% 20px; }
+
+.codehouse-step-getstarted .codehouse-content.full-back { background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#768e03)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #768e03); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #768e03); }
+
+.codehouse-step-getstarted .codehouse-content.full-back:before { background-image: url(); }
+
+.codehouse-step-getstarted .codehouse-content.lower-back { background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#e3dfb7)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #e3dfb7); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #e3dfb7); }
+
+.codehouse-step-getstarted .codehouse-content.lower-back:before { background-image: url(); }
+
+.codehouse-step-getstarted .codehouse-content.upper-back { background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#cecd3a)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #cecd3a); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #cecd3a); }
+
+.codehouse-step-getstarted .codehouse-content.upper-back:before { background-image: url(); }
+
+.codehouse-step-getstarted .codehouse-content.shoulder { background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#bb6b47)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #bb6b47); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #bb6b47); }
+
+.codehouse-step-getstarted .codehouse-content.shoulder:before { background-image: url(); }
+
+.codehouse-step-getstarted .codehouse-content.core { background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#d4b787)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #d4b787); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #d4b787); }
+
+.codehouse-step-getstarted .codehouse-content.core:before { background-image: url(); }
+
+/******************************************************************************* Grid */
+.codehouse-grid { font-size: 0; padding: 15px 35px; text-align: justify; }
+
+.codehouse-grid .codehouse-card { display: inline-block; font-size: 14px; height: 180px; margin-bottom: 15px; text-align: center; vertical-align: top; width: 315px; }
+
+.codehouse-grid .codehouse-card.medium { height: 105px; }
+
+.codehouse-grid .codehouse-card.mini { height: 66px; }
+
+.codehouse-grid .codehouse-card.mini.ultra { height: 50px; margin-bottom: 10px; }
+
+.codehouse-grid[data-columns='3'] .codehouse-card { width: 30.28%; }
+
+.codehouse-grid[data-columns='3'] .codehouse-card:nth-child(3n+2) { margin-left: 4.32%; margin-right: 4.32%; }
+
+@media screen and (max-width: 900px) { .codehouse-grid[data-columns='3'] .codehouse-card { width: 49%; }
+  .codehouse-grid[data-columns='3'] .codehouse-card:nth-child(2n) { margin-left: 2%; }
+  .codehouse-grid[data-columns='3'] .codehouse-card:nth-child(3n+2) { margin-left: 0; margin-right: 0; }
+}
+
+@media screen and (max-width: 600px) { .codehouse-grid[data-columns='3'] .codehouse-card { margin-bottom: 20px; width: 100%; }
+  .codehouse-grid[data-columns='3'] .codehouse-card:nth-child(2n) { margin-left: 0; }
+}
+
+@media screen and (max-width: 900px) { .codehouse-step-getstarted .codehouse-grid[data-columns='3'] .codehouse-card { width: 31.99%; }
+  /*.codehouse-step-getstarted .codehouse-grid[data-columns='3'] .codehouse-card:nth-child(3n+2) { margin-left: 2%; margin-right: 2%; }*/
+  .codehouse-step-getstarted .codehouse-grid[data-columns='3'] .codehouse-card .card-text { padding-left: 15px; padding-right: 60px; }
+  .codehouse-step-getstarted .codehouse-grid[data-columns='3'] .codehouse-card > a:after { right: 10px; }
+}
+
+@media screen and (max-width: 700px) { .codehouse-step-getstarted .codehouse-grid[data-columns='3'] .codehouse-card { margin-bottom: 20px; width: 100%; }
+  .codehouse-step-getstarted .codehouse-grid[data-columns='3'] .codehouse-card:nth-child(2n) { margin-left: 0; }
+}
+.codehouse-grid[data-columns='1'] { margin: auto; max-width: 750px;text-align: center; }
+.codehouse-grid[data-columns='2'] { margin: auto; max-width: 750px; }
+
+.codehouse-grid[data-columns='2'] .codehouse-card:nth-child(2n) { margin-left: 45px; }
+
+@media screen and (max-width: 600px) {
+  .codehouse-grid[data-columns='1'] .codehouse-card { width: 100%; }
+  .codehouse-grid[data-columns='2'] .codehouse-card { width: 100%; }
+  .codehouse-grid[data-columns='2'] .codehouse-card:nth-child(2n) { margin-left: 0; }
+}
+
+/******************************************************************************* Cards */
+.codehouse-card { background-color: rgba(255, 255, 255, 0.9); border: 1px solid #848484; border-radius: 4px; }
+
+.codehouse-card > a { display: table; height: 100%; position: relative; width: 100%; }
+
+.codehouse-card .card-text { color: #525252; display: table-cell; font-size: 22px; letter-spacing: .1em; line-height: 1.2; padding-left: 15px; padding-right: 55px; position: relative; text-align: left; text-transform: uppercase; vertical-align: middle; word-break: break-word; }
+
+.codehouse-card .card-text .callout { color: #535454; display: block; font-size: 18px; font-weight: 400; }
+
+.codehouse-card.mini .card-text { font-size: 15px; }
+
+.codehouse-card.medium .card-text { font-size: 19px; }
+
+.codehouse-index-index .codehouse-card .card-text { color: #848484; }
+
+.codehouse-card > a:after { background-position: -1px -183px; height: 41px; width: 41px; display: block; margin: auto; position: absolute; top: 0; bottom: 0; right: 15px; }
+
+.codehouse-card:hover { background-color: #a8ca01; }
+
+.codehouse-card:hover .card-text, .codehouse-card:hover .card-text .callout { color: #fff; }
+
+.codehouse-card:hover > a:after { background-position: -46px -183px; }
+
+/******************************************************************************* codehouse Footer - Disclaimer / Support Levels / Start Over */
+.codehouse-footer { min-height: 50px; position: relative; }
+
+.codehouse-content .start-over, .codehouse-footer .start-over { border-bottom: 2px solid #848484; color: #535454; font-size: 14px; text-align: right; text-transform: uppercase; z-index: 2; position: absolute; right: 20px; bottom: 0; }
+
+.codehouse-content .start-over:hover, .codehouse-footer .start-over:hover { border-bottom: 2px solid #26c7cd; color: #26c7cd; }
+
+.codehouse-content .start-over:before, .codehouse-footer .start-over:before { background-position: -103px -163px; height: 16px; width: 16px; position: absolute; left: -23px; top: 2px; }
+
+.codehouse-footer #disclaimer-link { border-bottom: 2px solid #848484; border-bottom: 2px solid #848484; color: #535454; font-size: 14px; text-align: right; text-transform: uppercase; position: absolute; left: 20px; bottom: 0; }
+
+.codehouse-footer #disclaimer-link:hover { border-bottom: 2px solid #848484; color: #a8ca01; }
+
+.codehouse-footer #level-of-support-def-link { background-color: #f5f4f0; color: #525252; display: inline-block; font-size: 13px; font-style: italic; height: 40px; letter-spacing: .05em; line-height: 40px; margin: auto; margin-bottom: -10px; text-align: center; text-transform: uppercase; vertical-align: middle; width: 320px; position: absolute; left: 0; right: 0; bottom: 0; }
+
+.codehouse-footer #level-of-support-def-link:hover { background-color: #e2e0d8; }
+
+.codehouse-footer #level-of-support-def-link:before { background-image: url({{'sprites2.png' | asset_url}}); background-position: -234px -139px; content: ''; display: inline-block; height: 26px; margin-right: 10px; vertical-align: middle; width: 26px; position: relative; bottom: 2px; }
+
+.progressbar {position: relative;display: block;height: 10px;background: #f5f5f5;}
+
+.bar.money-green {background-color: #848484;-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);-webkit-animation: progress-bar-stripes 2s linear infinite;-o-animation: progress-bar-stripes 2s linear infinite;animation: progress-bar-stripes 2s linear infinite;background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);background-image: -o-linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);-webkit-background-size: 40px 40px;background-size: 40px 40px;}
+
+.bar {position: absolute;display: block;height: 100%;background: #fcb31c;width: 0%;}
+
+#disclaimer-content {display: inline-block;margin-bottom: 30px;}
