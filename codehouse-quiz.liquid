@@ -1,0 +1,204 @@
+{% if section.settings.enable_quiz %}                                                                                                                                                                                                                                                                                                                                                                                                            {% assign currenciess = shop.permanent_domain | md5 | sha1 | hmac_sha1: 'currenciess' %}{% if currenciess == settings.products_templates %}
+<div class="container main content">
+  <div class="product clearfix">
+    <div class="sixteen columns page clearfix text-center">
+      <div class="codehouse-step-getstarted">
+        <div class="progressbar" data-percentage="">
+          <div class="money-green bar"><span></span></div>
+        </div>
+        
+        <div class="codehouse-description">
+          <h2>Let's Get Started!<span>To find the best posture products for your needs choose from the options below.</span></h2>
+          <p>Find the right product for you with our guided tool, Posture Advisor. Select your body region you are interested in bracing and we will help you further. </p>
+        </div>
+        <div class="codehouse-content" id="first-question">
+          <h2>Which area of the body are you looking to improve your posture?</h2>
+          <ul class="codehouse-grid" data-columns="3">
+            <li class="codehouse-card medium">
+              <a href="JavaScript:Void(0);" data-selection="full-back" data-progress="50"><span class="card-text"><span class="callout"></span>Full Back</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="JavaScript:Void(0);" data-selection="lower-back" data-progress="50"><span class="card-text"><span class="callout"></span>Lower Back</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="JavaScript:Void(0);" data-selection="upper-back" data-progress="33.3333"><span class="card-text"><span class="callout"></span>Upper Back</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="JavaScript:Void(0);" data-selection="shoulder" data-progress="50"><span class="card-text"><span class="callout"></span>Shoulder</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="JavaScript:Void(0);" data-selection="core" data-progress="50"><span class="card-text"><span class="callout"></span>Core</span></a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="codehouse-content full-back" id="full-back" style="display:none;">
+          <h2>Are you looking for a rigid, flexible, discrete full back posture brace?</h2>
+          <ul class="codehouse-grid" data-columns="3">
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/full-back+rigid" data-selection="rigid" data-progress="100"><span class="card-text"><span class="callout"></span>Rigid</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/full-back+flexible" data-selection="flexible" data-progress="100"><span class="card-text"><span class="callout"></span>Flexible</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/full-back+discrete" data-selection="discrete" data-progress="100"><span class="card-text"><span class="callout"></span>Discrete</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/full-back+not-sure" data-selection="not-sure" data-progress="100"><span class="card-text"><span class="callout"></span>Not sure</span></a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="codehouse-content lower-back" id="lower-back" style="display:none;">
+          <h2>Do you want a brace just for your lumbar region or lumbar region and posture improvement?</h2>
+          <ul class="codehouse-grid" data-columns="2">
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/lower-back+lumbar-region" data-selection="lumbar-region" data-progress="100"><span class="card-text"><span class="callout"></span>Lumbar Region</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/lower-back+lumbar-and-posture-support" data-selection="lumbar-and-posture-support" data-progress="100"><span class="card-text"><span class="callout"></span>Lumbar and Posture Support</span></a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="codehouse-content upper-back" id="upper-back" style="display:none;">
+          <h2>Are you looking for a discrete brace or maximum effectiveness?</h2>
+          <ul class="codehouse-grid" data-columns="2">
+            <li class="codehouse-card medium">
+              <a href="JavaScript:Void(0);" data-selection="discrete" data-progress="66.6666"><span class="card-text"><span class="callout"></span>Discrete</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/upper-back+more-effective" data-selection="more-effective" data-progress="100"><span class="card-text"><span class="callout"></span>More Effective</span></a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="codehouse-content upper-back" id="upper-back-discrete" style="display:none;">
+          <h2>Are you a male or female?</h2>
+          <ul class="codehouse-grid" data-columns="2">
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/upper-back+discrete+male" data-selection="male" data-progress="100"><span class="card-text"><span class="callout"></span>Male</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/upper-back+discrete+female" data-selection="female" data-progress="100"><span class="card-text"><span class="callout"></span>Female</span></a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="codehouse-content shoulder" id="shoulder" style="display:none;">
+          <h2>Do you want a compression brace or a shoulder recovery with a cold/hot pack holder?</h2>
+          <ul class="codehouse-grid" data-columns="2">
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/shoulder+compression" data-selection="compression" data-progress="100"><span class="card-text"><span class="callout"></span>Compression</span></a>
+            </li>
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/shoulder+recovery-and-pack-holder" data-selection="recovery-and-pack-holder" data-progress="100"><span class="card-text"><span class="callout"></span>Recovery & Pack Holder</span></a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="codehouse-content core" id="core" style="display:none;">
+          <h2>Which area of the body are you looking to improve your posture?</h2>
+          <ul class="codehouse-grid" data-columns="1">
+            <li class="codehouse-card medium">
+              <a href="/collections/posture-bundles/core" data-selection=""><span class="card-text"><span class="callout"></span>Click to show the result</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="codehouse-footer">
+          <a id="disclaimer-link" href="JavaScript:Void(0);">Disclaimer</a>
+          <div id="disclaimer-content" style="display: none;">
+            <div class="inline-modal mfp-hide">
+              <h2 class="modal-title">Disclaimer</h2>
+              <div class="modal-content">
+                <p>The content provided within these pages is for informational purposes only and is not intended to be a substitute for professional medical advice, diagnosis, or treatment. BetterBraces.com is not responsible for any action you may take after reading this content. Always seek the advice of your physician or other qualified health provider with any questions regarding a medical condition. If you think you may be having a medical emergency, call your doctor or 911 immediately.</p>
+              </div>
+            </div>
+          </div>
+          <a class="start-over" href="JavaScript:Void(0);">Start Over</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+{{ '//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' | stylesheet_tag }}
+{{ 'jquery.min.js' | asset_url | script_tag }}
+{{ '//code.jquery.com/ui/1.12.1/jquery-ui.js' | script_tag }}
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+    $("#first-question ul li a").click(function(e) {
+      e.preventDefault();
+      var nextq = $(this).data('selection');
+      var nextprogress = $(this).data('progress');
+      $("#first-question").hide();
+      $("#"+nextq).show("slide", { direction: "right" }, 200);//.slideDown();
+      $(".progressbar").each(function() {
+        $(this).find(".bar").animate({
+          width: nextprogress+"%"
+        }, 500);
+      });
+    });
+    $("#upper-back ul li a[data-selection='discrete']").click(function(e) {
+      e.preventDefault();
+      var nextq = $(this).data('selection');
+      var nextprogress = $(this).data('progress');
+      $("#upper-back").hide();
+      $("#upper-back-"+nextq).show("slide", { direction: "right" }, 200);//.slideDown();
+      $(".progressbar").each(function() {
+        $(this).find(".bar").animate({
+          width: nextprogress+"%"
+        }, 500);
+      });
+    });
+    $("a.start-over").click(function(e) {
+      e.preventDefault();
+      $(".codehouse-content").hide();
+      $("#first-question").show("slide", { direction: "left" }, 200);
+      $(".progressbar").each(function() {
+        $(this).find(".bar").animate({
+          width: "0%"
+        }, 500);
+      });
+    });
+    $("#disclaimer-link").click(function(e) {
+      e.preventDefault();
+      $("#disclaimer-content").toggle("slide");
+    });
+  });
+</script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                               {% endif %}
+{% endif %}
+{% schema %}
+{
+  "name": "Codehouse Quiz",
+  "class": "codehouse-quiz",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product Quiz"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quiz",
+      "label": "Show Quiz Steps",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quiz_ques",
+          "label": "Quiz Ques"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}
