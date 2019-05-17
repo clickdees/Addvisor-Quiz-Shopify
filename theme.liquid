@@ -1,0 +1,6 @@
+{% if template == 'page.codehouse-quiz' or template == 'collection.quiz' %}
+     {{ 'custom.css' | asset_url | stylesheet_tag }}
+     {{ '//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' | stylesheet_tag }}
+     {{ '//code.jquery.com/jquery-3.4.1.min.js' | script_tag }}
+     {{ '//code.jquery.com/ui/1.12.1/jquery-ui.js' | script_tag }}
+{% endif %}
