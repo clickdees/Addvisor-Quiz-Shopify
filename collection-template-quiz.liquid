@@ -1,0 +1,92 @@
+<div class="container main content">
+  <div class="product clearfix">
+    <div class="sixteen columns page clearfix text-center">
+      <div class="codehouse-step-getstarted">
+        <div class="progressbar" data-percentage="">
+          <div class="money-green bar"><span></span></div>
+        </div>
+        
+        <div class="codehouse-description">
+          <h2>Let's Get Started!<span>To find the best posture products for your needs choose from the options below.</span></h2>
+          <p>Find the right product for you with our guided tool, Posture Advisor. Select your body region you are interested in bracing and we will help you further. </p>
+        </div>
+        <div class="codehouse-content" id="quiz-results">
+          <div class="container">
+            {% paginate collection.products by section.settings.pagination_limit %}
+            <div class="sixteen columns">
+              {% if collection.products.size == 0 %}
+              <div class="section clearfix collection-matrix">
+                <p class="quote">{{ 'collections.general.no_matches' | t }}</p>
+              </div>
+              {% else %}
+              {% assign products_per_row = section.settings.products_per_row %}
+              {% include 'product-loop', sidebar: sidebar %}
+              {% endif %}
+              
+              {% if settings.pagination_type == 'basic_pagination' %}
+              {% include 'pagination' with sidebar %}
+              {% endif %}
+            </div>
+            {% endpaginate %}
+          </div>
+        </div>
+          
+        <div class="codehouse-footer">
+          <a id="disclaimer-link" href="JavaScript:Void(0);">Disclaimer</a>
+          <div id="disclaimer-content" style="display: none;">
+            <div class="inline-modal mfp-hide">
+              <h2 class="modal-title">Disclaimer</h2>
+              <div class="modal-content">
+                <p>The content provided within these pages is for informational purposes only and is not intended to be a substitute for professional medical advice, diagnosis, or treatment. BetterBraces.com is not responsible for any action you may take after reading this content. Always seek the advice of your physician or other qualified health provider with any questions regarding a medical condition. If you think you may be having a medical emergency, call your doctor or 911 immediately.</p>
+              </div>
+            </div>
+          </div>
+          <a class="start-over" href="/pages/hierarchy-of-quiz">Start Over</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  jQuery(document).ready(function($){
+      $(".progressbar").each(function() {
+        $(this).find(".bar").animate({
+          width: "100%"
+        }, 500);
+    });
+    
+    $("#disclaimer-link").click(function(e) {
+      e.preventDefault();
+      $("#disclaimer-content").toggle("slide");
+    });
+  });
+</script>
+{% schema %}
+
+{
+  "name": "Codehouse Quiz Result",
+  "class": "collection-template-section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "Products per row",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "pagination_limit",
+      "label": "Products per page",
+      "min": 2,
+      "max": 50,
+      "step": 1,
+      "default": 48
+    }
+  ]
+}
+
+{% endschema %}
