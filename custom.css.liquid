@@ -50,27 +50,27 @@ a:hover, a:focus { outline: 0; }
 
 @media screen and (max-width: 700px) { .codehouse-step-getstarted .codehouse-content { padding-top: 0; } }
 
-.codehouse-step-getstarted .codehouse-content:before { background-image: url({{'codehouse-bg.png' | asset_url}}); background-position: 40% 20px; }
+.codehouse-step-getstarted .codehouse-content:before { background-image: url({{'codehouse-bg.png' | asset_url}}); background-size: cover; }
 
 .codehouse-step-getstarted .codehouse-content.full-back { background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#768e03)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #768e03); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #768e03); }
 
-.codehouse-step-getstarted .codehouse-content.full-back:before { background-image: url(); }
+.codehouse-step-getstarted .codehouse-content.full-back:before { background-image: url({{'full-back-bg.png' | asset_url}}); }
 
 .codehouse-step-getstarted .codehouse-content.lower-back { background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#e3dfb7)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #e3dfb7); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #e3dfb7); }
 
-.codehouse-step-getstarted .codehouse-content.lower-back:before { background-image: url(); }
+.codehouse-step-getstarted .codehouse-content.lower-back:before { background-image: url({{'lower-back-bg.png' | asset_url}}); }
 
 .codehouse-step-getstarted .codehouse-content.upper-back { background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#cecd3a)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #cecd3a); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #cecd3a); }
 
-.codehouse-step-getstarted .codehouse-content.upper-back:before { background-image: url(); }
+.codehouse-step-getstarted .codehouse-content.upper-back:before { background-image: url({{'upper-back-bg.png' | asset_url}}); }
 
 .codehouse-step-getstarted .codehouse-content.shoulder { background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#bb6b47)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #bb6b47); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #bb6b47); }
 
-.codehouse-step-getstarted .codehouse-content.shoulder:before { background-image: url(); }
+.codehouse-step-getstarted .codehouse-content.shoulder:before { background-image: url({{'shoulder-bg.png' | asset_url}}); }
 
 .codehouse-step-getstarted .codehouse-content.core { background: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 240, 237, 0)), to(#d4b787)); background: -webkit-linear-gradient(top, rgba(240, 240, 237, 0), #d4b787); background: linear-gradient(to bottom, rgba(240, 240, 237, 0), #d4b787); }
 
-.codehouse-step-getstarted .codehouse-content.core:before { background-image: url(); }
+.codehouse-step-getstarted .codehouse-content.core:before { background-image: url({{'core-bg.png' | asset_url}}); }
 
 /******************************************************************************* Grid */
 .codehouse-grid { font-size: 0; padding: 15px 35px; text-align: justify; }
@@ -165,3 +165,5 @@ a:hover, a:focus { outline: 0; }
 .bar {position: absolute;display: block;height: 100%;background: #fcb31c;width: 0%;}
 
 #disclaimer-content {display: inline-block;margin-bottom: 30px;}
+
+#shopify-section-collection-template-quiz .codehouse-content:before {background-image: none !important;}
