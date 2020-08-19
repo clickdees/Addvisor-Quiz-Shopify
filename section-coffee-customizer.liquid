@@ -1,0 +1,146 @@
+{{ 'custom.css' | asset_url | stylesheet_tag }}
+{{ '//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css' | stylesheet_tag }}
+{{ '//code.jquery.com/jquery-3.4.1.min.js' | script_tag }}
+{{ '//code.jquery.com/ui/1.12.1/jquery-ui.js' | script_tag }}
+<div class="container main content">
+  <div class="product clearfix">
+    <div class="sixteen columns page clearfix text-center">
+      <div class="codehouse-step-getstarted">
+        <div class="progressbar" data-percentage="">
+          <div class="money-green bar"><span></span></div>
+        </div>        
+        <div class="codehouse-description">
+          <h2>{{section.settings.heading}}</h2>
+          <p>{{section.settings.text}}</p>
+        </div>
+        {% for block in section.blocks %}
+        {% assign findex = forloop.first %}
+        {% assign lindex = forloop.last %}
+        {% assign index = forloop.index %}
+        <div class="codehouse-content" id="ques-{{index}}"{% if findex %}{% else %} style="display:none;"{% endif %}>
+          <h2>{{block.settings.question}}</h2>
+          <ul class="codehouse-grid user-choice" data-columns="3">
+            {% assign choices = block.settings.choices | replace:' ,',',' | replace:', ',',' | split:',' %}
+            {% for choice in choices %}
+            <li class="codehouse-card medium">
+              <a href="{% if lindex %}/collections/all/?view=quiz{% else %}JavaScript:Void(0);{% endif %}"{% if lindex %} class="show-result"{% endif %} data-selection="{{choice}}" data-progress="{{section.block.size | divided_by: 100 }}">
+                <span class="card-text"><span class="callout"></span>{{choice}}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          <input class="user-choice-temp" type="hidden" value="" id="ans-{{index}}">
+        </div>
+        {% endfor %}
+        {%comment%}
+        <div class="codehouse-footer">
+          <a id="disclaimer-link" href="JavaScript:Void(0);">{{section.settings.btn}}</a>
+          <div id="disclaimer-content" style="display: none;">
+            <div class="inline-modal mfp-hide">
+              <h2 class="modal-title">{{section.settings.btn}}</h2>
+              <div class="modal-content">
+                <p>{{section.settings.disclaimer}}</p>
+              </div>
+            </div>
+          </div>
+          <a class="start-over" href="JavaScript:Void(0);">{{section.settings.start}}</a>
+        </div>
+        {%endcomment%}
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("ul.user-choice li a:not(.show-result)").click(function(e) {
+      e.preventDefault();
+      var thisdiv = $(this).parents('.codehouse-content');
+      var nextprogress = $(this).data('progress');
+      thisdiv.hide();
+      thisdiv.next().show("slide", { direction: "right" }, 200);
+      thisdiv.find('.user-choice-temp').val($(this).data('selection'));
+      var arrayresult = $('.user-choice-temp').map(function(){return $(this).val().toLowerCase().replace(' ','-');}).get();
+      $('.show-result').attr('href', '/collections/all/'+arrayresult.join('+').replace(' ','-')+'?view=quiz');
+      $(".bar").animate({width: nextprogress+"%"}, 500);
+    });
+    {%comment%}
+    $("a.start-over").click(function(e) {
+      e.preventDefault();
+      $(".codehouse-content").hide();
+      $("#first-question").show("slide", { direction: "left" }, 200);
+      $(".progressbar").each(function() {
+        $(this).find(".bar").animate({
+          width: "0%"
+        }, 500);
+      });
+    });
+    $("#disclaimer-link").click(function(e) {
+      e.preventDefault();
+      $("#disclaimer-content").toggle("slide");
+    });
+    {%endcomment%}
+  });
+</script>
+{% schema %}
+{
+  "name": "Codehouse Quiz",
+  "class": "codehouse-quiz",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product Quiz"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_quiz",
+      "label": "Show Quiz Steps",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "btn",
+      "label": "Error Button"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "Disclaimer Content"
+    },
+    {
+      "type": "text",
+      "id": "start",
+      "label": "Start Over Button"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "question",
+          "label": "Quiz Question"
+        },
+        {
+          "type": "textarea",
+          "id": "choices",
+          "label": "Quiz Answers",
+          "info": "Please enter comma seperated values. e.g: ans1, ans2"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}
