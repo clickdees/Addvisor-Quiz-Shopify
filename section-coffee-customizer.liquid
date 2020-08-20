@@ -13,6 +13,8 @@
           <h2>{{section.settings.heading}}</h2>
           <p>{{section.settings.text}}</p>
         </div>
+        {% capture section-blocks-size %}{% for block in section.blocks %}{{ block.settings.question }}{%if forloop.last %}{%else%},{%endif%}{% endfor %}{% endcapture %}
+        {% assign blocks-size = section-blocks-size | split: ',' %}
         {% for block in section.blocks %}
         {% assign findex = forloop.first %}
         {% assign lindex = forloop.last %}
@@ -23,7 +25,7 @@
             {% assign choices = block.settings.choices | replace:' ,',',' | replace:', ',',' | split:',' %}
             {% for choice in choices %}
             <li class="codehouse-card medium">
-              <a href="{% if lindex %}/collections/all/?view=quiz{% else %}JavaScript:Void(0);{% endif %}"{% if lindex %} class="show-result"{% endif %} data-selection="{{choice}}" data-progress="{{section.block.size | divided_by: 100 }}">
+              <a href="{% if lindex %}/collections/all/?view=quiz{% else %}JavaScript:Void(0);{% endif %}"{% if lindex %} class="show-result"{% endif %} data-selection="{{choice}}" data-progress="{{ blocks-size.size | minus: index | times: 100 | divided_by: blocks-size.size | minus: 100 | abs }}">
                 <span class="card-text"><span class="callout"></span>{{choice}}</span>
               </a>
             </li>
@@ -61,7 +63,7 @@
       thisdiv.find('.user-choice-temp').val($(this).data('selection'));
       var arrayresult = $('.user-choice-temp').map(function(){return $(this).val().toLowerCase().replace(' ','-');}).get();
       $('.show-result').attr('href', '/collections/all/'+arrayresult.join('+').replace(' ','-')+'?view=quiz');
-      $(".bar").animate({width: nextprogress+"%"}, 500);
+      $('.bar').animate({width: nextprogress+"%"}, 500);
     });
     {%comment%}
     $("a.start-over").click(function(e) {
@@ -142,5 +144,4 @@
     }
   ]
 }
-
 {% endschema %}
